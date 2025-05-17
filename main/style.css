@@ -1,0 +1,139 @@
+body {
+    background-color: #18230F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#main {
+    z-index: 0;
+    position: relative;
+    width: 1600px;
+    height: 800px;
+    /* background-color: aqua; */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 15px;
+}
+
+#canvas {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 190px;
+    bottom: 85px;
+    width: 1150px;
+    height: 700px;
+    background-color: #27391C;
+    border-radius: 20px;
+}
+
+#menus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    z-index: 1;
+    position: fixed;
+    bottom: 85px;
+    right: 180px;
+    width: 360px;
+    height: 700px;
+    /* background-color: aqua; */
+    border-radius: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    width: 85px;
+    height: 700px;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#menu1 {
+    background-color: #27391C;
+}
+
+#menu2 {
+    background-color: #255F38;
+}
+
+#menu3 {
+    background-color: #1F7D53;
+}
+
+#menu4 {
+    background-color: #03A791;
+}
+
+.menu.grande {
+    overflow: visible;
+    width: 400px;
+    background-color: #03A791;
+}
+.sub {
+    background-color: #ACC572;
+    border-radius: 15px;
+    width: 80%;
+    height: 50px;
+    display: none;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    transition: all 0.4s ease;
+
+}
+.sub:hover{
+    background-color: #1DCD9F;
+}
+
+.menu.grande .sub {
+    display: block;
+}
+
+
+
+#titulo {
+    color: #F2F2F2;
+    bottom: 805px;
+    margin: 0 auto;
+    z-index: 2;
+    position: fixed;
+    width: 300px;
+    height: 40px;
+    display: flex;
+    /* background-color: blue; */
+    border-radius: 20px;
+}
+
+#textcanva {
+    padding: 10px;
+    color: white;
+    font-size: 17px;
+    border: none;
+    z-index: 2;
+    position: fixed;
+    width: 1100px;
+    height: 660px;
+    background-color: #1a29199f;
+    border-radius: 20px;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    overflow-y: auto;
+}
