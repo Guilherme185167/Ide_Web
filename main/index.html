@@ -9,43 +9,58 @@
 </head>
 
 <body>
+    <!-- Splash de carregamento -->
+<div id="loadingScreen" style="display: none;">
+  <div class="loading-container">
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+    <p class="loading-text">Iniciando...</p>
+  </div>
+</div>
+
     <div id="main">
-        <h1 id="titulo">LOREM IPSUN</h1>
+        <h1 id="titulo">OBLITERADOR 3000</h1>
         <div id="canvas">
-            <textarea id="textcanva" placeholder=">>>"></textarea>
+            <textarea id="textcanva" placeholder=">>>" spellcheck="false"></textarea>
         </div>
         <div id="menus">
             <div id="menu1" class="menu" onclick="ativarMenu('menu1')">
-                <div id="sub1" class="sub"></div>
-                <div id="sub2" class="sub"></div>
-                <div id="sub3" class="sub"></div>
-                <div id="sub4" class="sub"></div>
-                <div id="sub5" class="sub"></div>
-                <div id="sub6" class="sub"></div>
+                <span class="vertical-title">F<br>U<br>N<br>Ç<br>Õ<br>E<br>S</span>
+                <span class="horizontal-title">FUNÇÕES</span>
+                <div id="sub1" class="sub" onclick="escreval('escreval()\n')">Escreval</div>
+                <div id="sub2" class="sub" onclick="leia('leia()\n')">leia</div>
+                <div id="sub3" class="sub" onclick="para('para i de i ate i faca\n\nfimpara\n')">para...passo</div>
+                <div id="sub4" class="sub" onclick="enquanto('enquanto i = 1 faca\n\nfimenquanto\n')">enquanto</div>
+                <div id="sub5" class="sub" onclick="se('se()entao\n\nfimse\n')">se..entao</div>
+                <div id="sub6" class="sub" onclick="repita('repita\n\nate i = n\n')">repita</div>
             </div>
             <div id="menu2" class="menu" onclick="ativarMenu('menu2')">
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
+                <div id="sub7" class="sub" onclick=""></div>
+                <div id="sub8" class="sub" onclick=""></div>
+                <div id="sub9" class="sub" onclick=""></div>
+                <div id="sub10" class="sub" onclick=""></div>
+                <div id="sub11" class="sub" onclick=""></div>
+                <div id="sub12" class="sub" onclick=""></div>
             </div>
             <div id="menu3" class="menu" onclick="ativarMenu('menu3')">
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
+                <div id="sub13" class="sub" onclick=""></div>
+                <div id="sub14" class="sub" onclick=""></div>
+                <div id="sub15" class="sub" onclick=""></div>
+                <div id="sub16" class="sub" onclick=""></div>
+                <div id="sub17" class="sub" onclick=""></div>
+                <div id="sub18" class="sub" onclick=""></div>
             </div>
             <div id="menu4" class="menu" onclick="ativarMenu('menu4')">
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
-                <div id="sub1" class="sub"></div>
+                <span class="vertical-title">F<br>O<br>R<br>M<br>A<br>T<br>O</span>
+                <span class="horizontal-title">FORMATO</span>
+                <div id="sub19" class="sub" onclick="limparCanvas()">CLEAR</div>
+                <div id="sub20" class="sub" onclick=""></div>
+                <div id="sub21" class="sub" onclick=""></div>
+                <div id="sub22" class="sub" onclick=""></div>
+                <div id="sub23" class="sub" onclick=""></div>
+                <div id="sub24" class="sub" onclick="start('algoritimo:\n\nvar\n\n\ninicio\n\n\nfimalgoritimo\n')">
+                    INICIO</div>
             </div>
         </div>
     </div>

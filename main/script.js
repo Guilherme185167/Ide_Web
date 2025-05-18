@@ -26,3 +26,207 @@ document.querySelectorAll('.sub').forEach(sub => {
         console.log('Submenu clicado!');
     });
 });
+function escreval(texto) {
+  const textarea = document.getElementById('textcanva');
+  
+  // pega a posição atual do cursor
+  const start = textarea.selectionStart;
+  const end = textarea.selectionEnd;
+
+  // divide o texto em antes e depois do cursor
+  const antes = textarea.value.substring(0, start);
+  const depois = textarea.value.substring(end);
+
+  // junta antes + texto novo + depois
+  textarea.value = antes + texto + depois;
+
+  // atualiza o cursor pra depois do texto inserido
+  const pos = start + texto.length;
+  textarea.selectionStart = textarea.selectionEnd = pos;
+
+  // mantém o foco no textarea
+  textarea.focus();
+}
+function leia(texto) {
+  const textarea = document.getElementById('textcanva');
+  
+  // pega a posição atual do cursor
+  const start = textarea.selectionStart;
+  const end = textarea.selectionEnd;
+
+  // divide o texto em antes e depois do cursor
+  const antes = textarea.value.substring(0, start);
+  const depois = textarea.value.substring(end);
+
+  // junta antes + texto novo + depois
+  textarea.value = antes + texto + depois;
+
+  // atualiza o cursor pra depois do texto inserido
+  const pos = start + texto.length;
+  textarea.selectionStart = textarea.selectionEnd = pos;
+
+  // mantém o foco no textarea
+  textarea.focus();
+}
+function para(texto) {
+  const textarea = document.getElementById('textcanva');
+  
+  // pega a posição atual do cursor
+  const start = textarea.selectionStart;
+  const end = textarea.selectionEnd;
+
+  // divide o texto em antes e depois do cursor
+  const antes = textarea.value.substring(0, start);
+  const depois = textarea.value.substring(end);
+
+  // junta antes + texto novo + depois
+  textarea.value = antes + texto + depois;
+
+  // atualiza o cursor pra depois do texto inserido
+  const pos = start + texto.length;
+  textarea.selectionStart = textarea.selectionEnd = pos;
+
+  // mantém o foco no textarea
+  textarea.focus();
+}
+function enquanto(texto) {
+  const textarea = document.getElementById('textcanva');
+  
+  // pega a posição atual do cursor
+  const start = textarea.selectionStart;
+  const end = textarea.selectionEnd;
+
+  // divide o texto em antes e depois do cursor
+  const antes = textarea.value.substring(0, start);
+  const depois = textarea.value.substring(end);
+
+  // junta antes + texto novo + depois
+  textarea.value = antes + texto + depois;
+
+  // atualiza o cursor pra depois do texto inserido
+  const pos = start + texto.length;
+  textarea.selectionStart = textarea.selectionEnd = pos;
+
+  // mantém o foco no textarea
+  textarea.focus();
+}
+function repita(texto) {
+  const textarea = document.getElementById('textcanva');
+  
+  // pega a posição atual do cursor
+  const start = textarea.selectionStart;
+  const end = textarea.selectionEnd;
+
+  // divide o texto em antes e depois do cursor
+  const antes = textarea.value.substring(0, start);
+  const depois = textarea.value.substring(end);
+
+  // junta antes + texto novo + depois
+  textarea.value = antes + texto + depois;
+
+  // atualiza o cursor pra depois do texto inserido
+  const pos = start + texto.length;
+  textarea.selectionStart = textarea.selectionEnd = pos;
+
+  // mantém o foco no textarea
+  textarea.focus();
+}
+function se(texto) {
+  const textarea = document.getElementById('textcanva');
+  
+  // pega a posição atual do cursor
+  const start = textarea.selectionStart;
+  const end = textarea.selectionEnd;
+
+  // divide o texto em antes e depois do cursor
+  const antes = textarea.value.substring(0, start);
+  const depois = textarea.value.substring(end);
+
+  // junta antes + texto novo + depois
+  textarea.value = antes + texto + depois;
+
+  // atualiza o cursor pra depois do texto inserido
+  const pos = start + texto.length;
+  textarea.selectionStart = textarea.selectionEnd = pos;
+
+  // mantém o foco no textarea
+  textarea.focus();
+}
+
+function start(texto) {
+  const textarea = document.getElementById('textcanva');
+  
+  // pega a posição atual do cursor
+  const start = textarea.selectionStart;
+  const end = textarea.selectionEnd;
+
+  // divide o texto em antes e depois do cursor
+  const antes = textarea.value.substring(0, start);
+  const depois = textarea.value.substring(end);
+
+  // junta antes + texto novo + depois
+  textarea.value = antes + texto + depois;
+
+  // atualiza o cursor pra depois do texto inserido
+  const pos = start + texto.length;
+  textarea.selectionStart = textarea.selectionEnd = pos;
+
+  // mantém o foco no textarea
+  textarea.focus();
+}
+function limparCanvas() {
+  const textarea = document.getElementById('textcanva');
+  textarea.value = '';
+}
+
+const hoverSound = new Audio("sons/145443__soughtaftersounds__menu-click-dry.mp3"); // Caminho do som de hover
+
+document.querySelectorAll('.menu').forEach(menu => {
+    menu.addEventListener('mouseenter', () => {
+        hoverSound.currentTime = 0; // Reinicia o som se for tocado várias vezes seguidas
+        hoverSound.play();
+    });
+});
+const clickSound = new Audio("sons/503340__tahutoa__clicky-accept-menu-sound.wav"); // Caminho do som de clique
+
+document.querySelectorAll('.sub').forEach(sub => {
+    sub.addEventListener('click', () => {
+        clickSound.currentTime = 0;
+        clickSound.play();
+        escreva(">>> função inserida aqui"); // Exemplo de função de inserção
+    });
+});
+
+const somBotaoEspecial = new Audio('sons/toutch.wav');
+const botao = document.getElementById('sub24');
+const loadingScreen = document.getElementById('loadingScreen');
+const progressFill = document.querySelector('.progress-fill');
+
+botao.addEventListener('click', () => {
+    somBotaoEspecial.currentTime = 0;
+    somBotaoEspecial.play();
+
+    // Mostra a splash screen
+    loadingScreen.style.display = 'flex';
+    progressFill.style.width = '0%';
+
+    // Simula o carregamento progressivo em 14 segundos
+    let duration = 6000;
+    let stepTime = 100; // tempo de passo
+    let steps = duration / stepTime;
+    let currentStep = 0;
+
+    const interval = setInterval(() => {
+        currentStep++;
+        let progress = (currentStep / steps) * 100;
+        progressFill.style.width = progress + '%';
+
+        if (currentStep >= steps) {
+            clearInterval(interval);
+            loadingScreen.style.display = 'none';
+
+            // Ação após o carregamento
+            console.log('Ação do botão após o splash');
+        }
+    }, stepTime);
+});

@@ -64,6 +64,10 @@ body {
     cursor: pointer;
 }
 
+.menu:hover {
+    box-shadow: 0 0 10px white;
+}
+
 #menu1 {
     background-color: #27391C;
 }
@@ -85,20 +89,30 @@ body {
     width: 400px;
     background-color: #03A791;
 }
+
 .sub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #ACC572;
     border-radius: 15px;
     width: 80%;
     height: 50px;
     display: none;
     padding: 10px;
-    color: white;
+    color: #18230F;
+    font-style: oblique;
+    font-weight: 600;
+    font-family: Georgia, Times New Roman, 'Times', serif;
     text-align: center;
+    font-size: 20px;
     transition: all 0.4s ease;
 
 }
-.sub:hover{
+
+.sub:hover {
     background-color: #1DCD9F;
+    box-shadow: 0 0 20px #03A791;
 }
 
 .menu.grande .sub {
@@ -109,11 +123,12 @@ body {
 
 #titulo {
     color: #F2F2F2;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     bottom: 805px;
     margin: 0 auto;
     z-index: 2;
     position: fixed;
-    width: 300px;
+    width: 500px;
     height: 40px;
     display: flex;
     /* background-color: blue; */
@@ -136,4 +151,96 @@ body {
     box-sizing: border-box;
     white-space: pre-wrap;
     overflow-y: auto;
+}
+
+.vertical-title,
+.horizontal-title {
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+    user-select: none;
+}
+
+/* Exibir vertical por padrão */
+.vertical-title {
+    display: block;
+}
+
+/* Ocultar horizontal por padrão */
+.horizontal-title {
+    display: none;
+}
+
+/* Quando o menu está expandido (grande) */
+.menu.grande .vertical-title {
+    display: none;
+}
+
+.menu.grande .horizontal-title {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#sub24 {
+    background-color: rgb(113, 182, 9);
+}
+
+#sub19 {
+    background-color: rgb(153, 20, 20);
+}
+
+#sub19:hover {
+    background-color: rgb(247, 23, 23);
+    box-shadow: 0 0 20px red;
+}
+
+#sub24:hover {
+    background-color: rgb(9, 247, 88);
+    box-shadow: 0 0 20px rgb(0, 255, 34);
+}
+
+#loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #18230F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.loading-container {
+  text-align: center;
+  width: 60%;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #27391C;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #1DCD9F;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #1F7D53, #03A791);
+  transition: width 0.25s;
+}
+
+.loading-text {
+  color: #F2F2F2;
+  margin-top: 20px;
+  font-size: 1.3em;
+  font-family: monospace;
+  letter-spacing: 1px;
 }
